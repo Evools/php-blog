@@ -544,6 +544,44 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.m-auto {
+  margin: auto;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -560,6 +598,14 @@ video {
   margin-top: 3rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -570,6 +616,18 @@ video {
 
 .max-w-\[280px\] {
   max-width: 280px;
+}
+
+.max-w-56 {
+  max-width: 14rem;
+}
+
+.max-w-80 {
+  max-width: 20rem;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -588,6 +646,23 @@ video {
   border-radius: 1rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-\[\#F2F4F6\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(242 244 246 / var(--tw-border-opacity));
+}
+
 .bg-\[\#2D3548\] {
   --tw-bg-opacity: 1;
   background-color: rgb(45 53 72 / var(--tw-bg-opacity));
@@ -596,6 +671,18 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-8 {
@@ -618,6 +705,11 @@ video {
   line-height: 1.5rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-\[700\] {
   font-weight: 700;
 }
@@ -634,6 +726,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -835,41 +932,6 @@ video {
 }
 
 .news {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .news {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .news {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .news {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .news {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .news {
-    max-width: 1536px;
-  }
-}
-
-.news {
-  margin: auto;
   margin-top: 2.5rem;
 }
 

@@ -10,6 +10,9 @@ $title_name = "PHP Blog";
         <?php include "./include/category/index.php"; ?>
     </header>
 
-    <?php include "./include/news/index.php" ?>
+    <div class="container m-auto">
+        <?php include "./include/news/index.php" ?>
+    </div>
+
 </div>
 <?php include "./layout/footer.php"; ?>

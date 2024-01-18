@@ -1,9 +1,16 @@
 <?php
 
-require_once __DIR__.'/router.php';
+require_once __DIR__ . '/router.php';
 
 get('/', 'pages/index.php');
 get('/contact', 'pages/contact.php');
+
+
+
+get('/admin', 'admin/index.php');
+post('/admin', 'admin/index.php');
+
+
 //get('/user/$id', 'pages/user');
 //get('/user/$name/$last_name', 'views/full_name.php');
 //get('/product/$type/color/$color', 'product.php');
@@ -20,4 +27,4 @@ get('/contact', 'pages/contact.php');
 //post('/user', '/api/save_user');
 
 
-any('/404','pages/404.php');
+any('/404', 'pages/404.php');
