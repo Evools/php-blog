@@ -3,58 +3,71 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Aeroport";
-    src: url("../fonts/Aeroport/Aeroport.ttf");
-    font-weight: normal;
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport/Aeroport.ttf");
+  font-weight: normal;
 }
 @font-face {
-    font-family: "Aeroport";
-    src: url("../fonts/Aeroport/Aeroport-Bold.ttf");
-    font-weight: 700;
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport/Aeroport-Bold.ttf");
+  font-weight: 700;
 }
 @font-face {
-    font-family: "Aeroport";
-    src: url("../fonts/Aeroport/Aeroport-Light.ttf");
-    font-weight: 300;
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport/Aeroport-Light.ttf");
+  font-weight: 300;
 }
 @font-face {
-    font-family: "Aeroport";
-    src: url("../fonts/Aeroport/Aeroport-LightItalic.ttf");
-    font-weight: 200;
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport/Aeroport-LightItalic.ttf");
+  font-weight: 200;
 }
 @font-face {
-    font-family: "Aeroport";
-    src: url("../fonts/Aeroport/Aeroport-Medium.ttf");
-    font-weight: 600;
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport/Aeroport-Medium.ttf");
+  font-weight: 600;
 }
-
-.wrapper{
-    font-family: "Aeroport", sans-serif;
+.icon {
+  width: 24px;
+  height: 24px;
 }
-.border-gray{
-    border-bottom: 1px solid #F2F4F6;
+.wrapper {
+  font-family: "Aeroport", sans-serif;
 }
-.nav-bar{
-    @apply container py-3 m-auto text-[#2D3548] justify-between flex items-center;
+.border-gray {
+  border-bottom: 1px solid #f2f4f6;
 }
-.logo{
-    @apply flex items-center gap-2;
+.nav-bar {
+  @apply container py-3 m-auto text-[#2D3548] justify-between flex items-center;
 }
-.blog-span{
-    @apply bg-[#F2F3F5] text-[#2D3548] py-1 px-4 rounded-full;
+.logo {
+  @apply flex items-center gap-2;
 }
-.category{
-    @apply flex items-center gap-5 py-3 container m-auto text-[#2D3548];
+.blog-span {
+  @apply bg-[#F2F3F5] text-[#2D3548] py-1 px-4 rounded-full;
 }
-.category-link{
-    @apply transition hover:text-[#467AE9]
+.category {
+  @apply flex items-center gap-5 py-3 container m-auto text-[#2D3548];
 }
-
+.category-link {
+  @apply transition hover:text-[#467AE9];
+}
+.post {
+  @apply flex items-center gap-10 w-full border border-[#F2F4F6] rounded-2xl p-2;
+}
+.news {
+  @apply container m-auto mt-10;
+}
+.row-post {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 20px;
+}
 @media screen and (max-width: 460px) {
-    .nav-bar{
-        @apply flex-col gap-10
-    }
-    .category{
-        @apply flex-col gap-6
-    }
+  .nav-bar {
+    @apply flex-col gap-10;
+  }
+  .category {
+    @apply flex-col gap-6;
+  }
 }
