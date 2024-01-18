@@ -8,7 +8,8 @@ get('/contact', 'pages/contact.php');
 
 
 get('/admin', 'admin/index.php');
-post('/admin', 'admin/index.php');
+get('/create-category', 'admin/create-category.php');
+post('/create-category', 'admin/create-category.php');
 
 
 //get('/user/$id', 'pages/user');

@@ -2,25 +2,6 @@
 require_once "./config/config.php";
 $title_name = "PHP Blog | Administration";
 
-$post = $_POST;
-
-
-$error_name = "";
-
-if (isset($post['create-category'])) {
-  if (empty($post['category'])) {
-    $error_name = "Поле не должно быть пустым";
-  }
-  if (empty($error_name)) {
-    $category = $post['category'];
-    $sql_category = "INSERT INTO `category` (id, title) VALUES (NULL, '$category')";
-    $query = mysqli_query($connect, $sql_category);
-    header("Location: /admin");
-  }
-}
-
-
-
 
 ?>
 
@@ -28,7 +9,6 @@ if (isset($post['create-category'])) {
 <div class="wrapper">
   <header class="bg-white">
     <?php include "./layout/nav.php"; ?>
-    <?php include "./include/category/index.php"; ?>
   </header>
 
 
@@ -91,7 +71,7 @@ if (isset($post['create-category'])) {
                 <p class="text-sm text-gray-500 leading-none mt-1">Вы будите перенаправленны на другую страницу</p>
               </div>
             </div>
-            <button class="flex-no-shrink bg-indigo-500 px-8 ml-4 py-3 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider text-white rounded-lg">Перейти</button>
+            <a href="/create-category" class="flex-no-shrink bg-indigo-500 px-8 ml-4 py-3 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider text-white rounded-lg">Перейти</a>
           </div>
         </div>
 
