@@ -15,7 +15,7 @@ $title_name = "PHP Blog | Administration";
   <div class="container m-auto mt-5">
     <h1 class="font-bold text-2xl">Панель Администратора</h1>
     <div class="mt-5 flex items-start justify-between gap-5">
-      <div class="flex w-full flex-col rounded-md bg-cover px-[30px] py-[30px] md:px-[64px] md:py-[56px] max-w-[95%] xl:max-w-[800px] w-[95%]" style='background-image: url("https://raw.githubusercontent.com/horizon-ui/horizon-tailwind-react-ts-corporate/main/src/assets/img/nfts/NftBanner1.png");'>
+      <div class="flex flex-col rounded-md bg-cover px-[30px] py-[30px] md:px-[64px] md:py-[56px] max-w-[95%] xl:max-w-[800px] w-[95%]" style='background-image: url("https://raw.githubusercontent.com/horizon-ui/horizon-tailwind-react-ts-corporate/main/src/assets/img/nfts/NftBanner1.png");'>
         <div class="w-full">
           <h4 class="mb-[14px] max-w-full text-xl font-bold text-white md:w-[64%] md:text-3xl md:leading-[42px] lg:w-[46%] xl:w-[85%] 2xl:w-[75%] 3xl:w-[52%]">
             Обучающая программа для группы СИТ
@@ -86,7 +86,7 @@ $title_name = "PHP Blog | Administration";
                 <p class="text-sm text-gray-500 leading-none mt-1">Вы будите перенаправленны на другую страницу</p>
               </div>
             </div>
-            <button class="flex-no-shrink bg-indigo-500 px-8 ml-4 py-3 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider text-white rounded-lg">Перейти</button>
+            <a href="/create-post" class="flex-no-shrink bg-indigo-500 px-8 ml-4 py-3 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider text-white rounded-lg">Перейти</a>
 
           </div>
         </div>
