@@ -20,8 +20,11 @@ post('/create-category', 'admin/create-category.php');
 
 get('/signin', 'pages/auth/signin.php');
 get('/signup', 'pages/auth/signup.php');
+get('/forgot', 'pages/auth/forgot-password.php');
 
 post('/signin', 'pages/auth/signin.php');
 post('/signup', 'pages/auth/signup.php');
+post('/forgot', 'pages/auth/forgot-password.php');
+
 
 any('/404', 'pages/404.php');

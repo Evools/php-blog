@@ -1,0 +1,3 @@
+Email: test@test.ru
+Reset Token: 6eb3ef4d29f2dd22014265c16dc6d737
+New Password: qCWjcjIE
