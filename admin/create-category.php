@@ -6,7 +6,12 @@ $title_name = "PHP Blog | Create Category";
 
 $post = $_POST;
 
-
+if (!isset($_SESSION['is_auth'])) {
+  header("Location: /signin");
+}
+if ($_SESSION['role'] != 3 && $_SESSION['role'] != 2) {
+  header("Location: /");
+}
 $error_name = "";
 
 if (isset($post['create-category'])) {

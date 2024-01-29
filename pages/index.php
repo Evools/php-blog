@@ -1,6 +1,10 @@
 <?php
 require_once "./config/config.php";
 $title_name = "PHP Blog";
+
+if (!isset($_SESSION['is_auth'])) {
+    header("Location: /signin");
+}
 ?>
 
 <?php include "./layout/header.php"; ?>

@@ -2,6 +2,13 @@
 require_once "./config/config.php";
 $title_name = "PHP Blog | Administration";
 
+if (!isset($_SESSION['is_auth'])) {
+  header("Location: /signin");
+}
+
+if ($_SESSION['role'] != 3 && $_SESSION['role'] != 2) {
+  header("Location: /");
+}
 
 ?>
 
