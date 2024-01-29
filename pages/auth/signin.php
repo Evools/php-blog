@@ -29,8 +29,9 @@ if (isset($_POST['login'])) {
           $_SESSION['is_auth'] = true;
           $_SESSION['username'] = $user['username'];
           $_SESSION['email'] = $user['email'];
-          $_SESSION['role'] = $user['role_id'];
           $_SESSION['id'] = $user['id'];
+          $roleQuery = "SELECT title FROM role WHERE id = :role_id";
+          $_SESSION['role'] = $user['role_id'];
           header("Location: /");
         } else {
           $err_message = "Не верный логин или пароль";

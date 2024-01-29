@@ -5,15 +5,18 @@ if (isset($_GET['logout'])) {
     header("Location: /signin");
 }
 
-switch ($_SESSION['role']) {
+$roleNumeric = $_SESSION['role']; // сохраняем числовое значение
+$roleString = ""; // создаем переменную для строкового представления роли
+
+switch ($roleNumeric) {
     case 2:
-        $_SESSION['role'] = "Модератор";
+        $roleString = "Модератор";
         break;
     case 3:
-        $_SESSION['role'] = "Администратор";
+        $roleString = "Администратор";
         break;
     default:
-        $_SESSION['role'] = "Пользователь";
+        $roleString = "Пользователь";
         break;
 }
 
@@ -47,7 +50,7 @@ switch ($_SESSION['role']) {
                                     <?= $_SESSION['email']; ?>
                                 </p>
                                 <p class="flex rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer" role="menuitem">
-                                    Ваша роль: <?= $_SESSION['role']; ?>
+                                    Ваша роль: <?= $roleString; ?>
                                 </p>
                                 <hr class="mt-2 mb-2">
                                 <?php if ($_SESSION['role'] == 3) : ?>

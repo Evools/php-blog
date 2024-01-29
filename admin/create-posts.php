@@ -6,7 +6,7 @@ $title_name = "PHP Blog | Create Category";
 if (!isset($_SESSION['is_auth'])) {
   header("Location: /signin");
 }
-if ($_SESSION['role'] != 3 && $_SESSION['role'] != 2) {
+if ($_SESSION['role'] != 3) {
   header("Location: /");
 }
 
