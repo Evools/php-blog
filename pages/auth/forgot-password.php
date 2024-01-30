@@ -12,30 +12,21 @@ if (isset($_POST['forgot_password'])) {
     $err_email = "Почта не должна быть пустой";
   }
 
+  if (empty($err_email)) {
+    // Генерация и сохранение временного токена
+    $reset_token = bin2hex(random_bytes(16));
 
-  if (isset($_POST['forgot_password'])) {
-    $email = $_POST['email'];
+    // Обновление пароля в базе данных
+    $new_password = generateNewPassword();
+    $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+    $sql = "UPDATE `users` SET `reset_token` = '$reset_token', `password` = '$hashed_password' WHERE `email` = '$email'";
+    mysqli_query($connect, $sql);
 
-    if (empty($email)) {
-      $err_email = "Почта не должна быть пустой";
-    }
+    // Сохранение данных в файл
+    $file_content = "Email: $email\nReset Token: $reset_token\nNew Password: $new_password\n";
+    file_put_contents('reset_data.txt', $file_content);
 
-    if (empty($err_email)) {
-      // Генерация и сохранение временного токена
-      $reset_token = bin2hex(random_bytes(16));
-
-      // Обновление пароля в базе данных
-      $new_password = generateNewPassword();
-      $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
-      $sql = "UPDATE `users` SET `reset_token` = '$reset_token', `password` = '$hashed_password' WHERE `email` = '$email'";
-      mysqli_query($connect, $sql);
-
-      // Сохранение данных в файл
-      $file_content = "Email: $email\nReset Token: $reset_token\nNew Password: $new_password\n";
-      file_put_contents('reset_data.txt', $file_content);
-
-      $success_message = "Новый пароль сгенерирован и обновлен в базе данных. Данные также сохранены в файл reset_data.txt.";
-    }
+    $success_message = "Новый пароль сгенерирован и обновлен в базе данных. Данные также сохранены в файл reset_data.txt.";
   }
 }
 
